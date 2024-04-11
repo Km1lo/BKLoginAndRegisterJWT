@@ -45,9 +45,6 @@ public class UsersController {
         uS.delete(id);
     }
 
-
-
-
     @GetMapping("/username/{users}")
     public UsersDTO findUsername(@PathVariable("users") String  users) {
 
