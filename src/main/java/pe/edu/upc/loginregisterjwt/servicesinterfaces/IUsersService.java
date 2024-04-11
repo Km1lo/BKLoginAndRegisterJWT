@@ -12,6 +12,5 @@ public interface IUsersService {
     public Users listarId(Long id);
     public Users findByUsername(String username);
 
-    public void UpdateTipodeCambio(String nombre);
 
 }
