@@ -24,18 +24,18 @@ public class RoleServiceImplement implements IRoleService {
     }
 
     @Override
-    public void insRol(String authority, Long user_id) {
-        rR.insRol(authority,user_id);
+    public void insRol(String authority, Long userid) {
+        rR.insRol(authority,userid);
     }
 
     @Override
-    public void updRol(String authority, Long user_id) {
-        rR.updRol(authority,user_id);
+    public void updRol(String authority, Long userid) {
+        rR.updRol(authority,userid);
     }
 
     @Override
-    public void delRol(Long user_id) {
-        rR.delRol(user_id);
+    public void delRol(Long userid) {
+        rR.delRol(userid);
     }
 
     @Override

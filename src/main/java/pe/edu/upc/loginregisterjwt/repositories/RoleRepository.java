@@ -14,22 +14,22 @@ public interface RoleRepository extends JpaRepository<Role, Long> {
 
     @Transactional
     @Modifying
-    @Query(value = "insert into roles (rol, user_id) VALUES (:rol, :user_id)", nativeQuery = true)
-    public void insRol(@Param("rol") String authority, @Param("user_id") Long user_id);
+    @Query(value = "insert into roles (rol, userid) VALUES (:rol, :userid)", nativeQuery = true)
+    public void insRol(@Param("rol") String authority, @Param("userid") Long userid);
 
     @Transactional
     @Modifying
-    @Query(value = "UPDATE roles set rol=:rol where user_id= :user_id", nativeQuery = true)
-    public void updRol(@Param("rol") String authority, @Param("user_id") Long user_id);
+    @Query(value = "UPDATE roles set rol=:rol where userid= :userid", nativeQuery = true)
+    public void updRol(@Param("rol") String authority, @Param("userid") Long userid);
 
     @Transactional
     @Modifying
-    @Query(value = "DELETE FROM roles WHERE user_id = :user_id", nativeQuery = true)
-    public void delRol(@Param("user_id") Long user_id);
+    @Query(value = "DELETE FROM roles WHERE userid = :userid", nativeQuery = true)
+    public void delRol(@Param("userid") Long userid);
 
     @Transactional
     @Modifying
-    @Query(value = "INSERT INTO roles (rol, user_id)\n" +
+    @Query(value = "INSERT INTO roles (rol, userid)\n" +
             " SELECT 'USER', id FROM users ORDER BY id DESC LIMIT 1;", nativeQuery = true)
     public void insRolLog();
 }

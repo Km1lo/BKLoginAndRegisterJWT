@@ -31,18 +31,18 @@ public class RoleController {
     }
 
     @PostMapping
-    public void insertarRol(@RequestParam("authority") String authority,@RequestParam("user_id") Long user_id){
-        rS.insRol(authority,user_id);
+    public void insertarRol(@RequestParam("authority") String authority,@RequestParam("userid") Long userid){
+        rS.insRol(authority,userid);
     }
 
     @PutMapping
-    public void modificarRol(@RequestParam("authority") String authority,@RequestParam("user_id") Long user_id){
-        rS.updRol(authority,user_id);
+    public void modificarRol(@RequestParam("authority") String authority,@RequestParam("userid") Long userid){
+        rS.updRol(authority,userid);
     }
 
-    @DeleteMapping("/{user_id}")
-    public void eliminar(@PathVariable("user_id") Long user_id){
-        rS.delRol(user_id);
+    @DeleteMapping("/{userid}")
+    public void eliminar(@PathVariable("userid") Long userid){
+        rS.delRol(userid);
     }
 
 

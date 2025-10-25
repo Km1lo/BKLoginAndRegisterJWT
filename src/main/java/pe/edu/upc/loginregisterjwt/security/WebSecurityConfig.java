@@ -64,6 +64,7 @@ public class WebSecurityConfig {
                 .antMatchers("/users/username/{users}").permitAll()
                 .antMatchers( "/roles").permitAll()
                 .antMatchers( "/roles/insrollog").permitAll()
+                .antMatchers("/oauth2/**").permitAll() // Permitir endpoints de OAuth2
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)
